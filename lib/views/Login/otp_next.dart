@@ -2,6 +2,8 @@ import 'package:e_learn/views/Home/home_scree.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../Home/home.dart';
+
 class NextOtp extends StatefulWidget {
   const NextOtp({Key? key}) : super(key: key);
 
@@ -16,7 +18,7 @@ class _NextOtpState extends State<NextOtp> {
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.only(top: 70, left: 30, right: 30),
+            padding: const EdgeInsets.only(top: 70, left: 30, right: 30),
             height: 300,
             width: double.infinity,
             child: Column(
@@ -157,7 +159,7 @@ class _NextOtpState extends State<NextOtp> {
           ),
           ElevatedButton(
               style: ButtonStyle(
-                  fixedSize: MaterialStateProperty.all(Size(270, 50)),
+                  fixedSize: MaterialStateProperty.all(const Size(270, 50)),
                   shape: MaterialStateProperty.all(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -166,7 +168,7 @@ class _NextOtpState extends State<NextOtp> {
               // style: ElevatedButton.styleFrom(
               //     padding: EdgeInsets.fromLTRB(24, 12, 24, 12)),
               onPressed: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => HomeScreen())),
+                  MaterialPageRoute(builder: (context) => const Home())),
               child: const Text(
                 "Verify and Create Account",
                 style: TextStyle(fontSize: 16),

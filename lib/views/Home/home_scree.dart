@@ -1,4 +1,7 @@
 import 'package:e_learn/on_boardingscreen.dart';
+import 'package:e_learn/views/Home/widget/a_cont.dart';
+import 'package:e_learn/views/Home/widget/b_carousel.dart';
+import 'package:e_learn/views/Home/widget/learning_platform.dart';
 import 'package:e_learn/views/Login/otp_validation.dart';
 import 'package:e_learn/views/SingnUp/sign_up.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -21,6 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Column(
               children: [
@@ -59,88 +63,49 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
+
+                // first container
+                const AaContainer(),
+                // Bcarousel(),
+
+                //learning Platform
+                const Text("Learning Platform",
+                    style:
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+                const LearningPlatform(),
                 Padding(
                   padding: const EdgeInsets.all(20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      Container(
-                        // height: 100,
-                        margin: EdgeInsets.all(15),
-                        // color: Colors.white,
-                        width: 335,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.5),
-                                spreadRadius: 5, //spread radius
-                                blurRadius: 7, // blur radius
-                                offset: const Offset(0, 2),
-                              )
-                            ]),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                  child: Container(
+                      padding: const EdgeInsets.all(16),
+                      height: 400,
+                      decoration: BoxDecoration(
+                          color: const Color(0xffEFE0FF),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Column(
+                        children: [
+                          Row(
                             children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  const Text("Learned today",
-                                      style: TextStyle(
-                                          color: Color(0xff858597),
-                                          fontSize: 12)),
-                                  // const SizedBox(
-                                  //   width: 80,
-                                  // ),
-                                  TextButton(
-                                      onPressed: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    HomeScreen()));
-                                      },
-                                      child: const Text("My courses")),
-                                ],
+                              const Text(
+                                "Meetup",
+                                style: TextStyle(
+                                    fontSize: 25, color: Color(0xff440687)),
                               ),
-                              Row(
-                                children: const [
-                                  Text(
-                                    "46min",
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  Text(
-                                    "/60min",
-                                    style: TextStyle(
-                                        color: Color(0xff858597), fontSize: 10),
-                                  ),
-                                ],
+                              const SizedBox(
+                                width: 40,
                               ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              const LinearProgressIndicator(
-                                backgroundColor: Colors.white70,
-                                color: Color(0xffFF5106),
-                                minHeight: 5,
-                                value: 0.7,
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(70),
+                                child: Image.asset(
+                                  "assets/lp1.jpeg",
+                                  height: 70,
+                                  width: 70,
+                                ),
                               ),
                             ],
                           ),
-                        ),
-                      )
-                    ],
-                  ),
-//courosal
+                          // text("Off-line exchange of learning experiences"),
+                        ],
+                      )),
                 )
               ],
             ),
@@ -150,42 +115,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-// body: Column(
-//         children: [
-//           Column(
-//             children: [
-//               Container(
-
-//                 color: primaryColor,
-//                 height: 185,
-//                 width: double.infinity,
-//                 child: Row(
-//                   children: [
-//                     Column(
-//                       children: const [
-//                         Text(
-//                           "Hi, Kristin",
-//                           style: TextStyle(
-//                               fontSize: 24,
-//                               fontWeight: FontWeight.bold,
-//                               color: Colors.white),
-//                         ),
-//                         Text(
-//                           "Let’s start learning",
-//                           style: TextStyle(fontSize: 14, color: Colors.white),
-//                         ),
-//                       ],
-//                     ),
-//                     const SizedBox(
-//                       width: 100,
-//                     ),
-//                     Image.asset("assets/Avatar.png")
-//                   ],
-//                 ),
-//               ),
-//               Expanded(child: SingleChildScrollView(child: Container()))
-//             ],
-//           ),
-//         ],
-//       ),
