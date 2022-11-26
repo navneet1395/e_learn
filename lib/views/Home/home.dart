@@ -1,10 +1,14 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:e_learn/views/Account/account.dart';
+import 'package:e_learn/views/Course/my_course.dart';
 import 'package:e_learn/views/Home/home_scree.dart';
 import 'package:e_learn/views/Login/login_page.dart';
-import 'package:e_learn/views/Login/otp_next.dart';
 import 'package:e_learn/views/Login/otp_validation.dart';
 import 'package:e_learn/views/SingnUp/sign_up.dart';
+import 'package:e_learn/views/messages/message.dart';
 import 'package:flutter/material.dart';
+
+import '../Course/course.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -17,12 +21,10 @@ class _HomeState extends State<Home> {
   int selectedpage = 0;
   final _pageNo = [
     HomeScreen(),
-    const LoginPage(),
-    const SignUp(),
-    OtpValidation(),
-    const NextOtp()
-    // ,
-    //  Favorite(), CartPage(), ProfilePage()
+    const CourseScreen(),
+    const message(),
+    message(),
+    const AccountScreen()
   ];
 
   @override

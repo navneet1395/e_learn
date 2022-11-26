@@ -1,3 +1,4 @@
+import 'package:e_learn/views/Course/my_course.dart';
 import 'package:e_learn/views/Home/home_scree.dart';
 import 'package:flutter/material.dart';
 
@@ -7,15 +8,15 @@ class AaContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         // ignore: prefer_const_literals_to_create_immutables
         children: [
           Container(
-            // height: 100,
-            margin: EdgeInsets.all(15),
+            height: 110,
+            margin: const EdgeInsets.all(15),
             // color: Colors.white,
             width: 335,
             decoration: BoxDecoration(
@@ -49,7 +50,7 @@ class AaContainer extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomeScreen()));
+                                    builder: (context) => const MyCourseScreen()));
                           },
                           child: const Text("My courses")),
                     ],
@@ -77,6 +78,7 @@ class AaContainer extends StatelessWidget {
                     minHeight: 5,
                     value: 0.7,
                   ),
+                  
                 ],
               ),
             ),

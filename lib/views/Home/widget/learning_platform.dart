@@ -6,7 +6,7 @@ class LearningPlatform extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 16,horizontal: 25),
+      padding: EdgeInsets.fromLTRB(20, 15, 20, 0),
       margin: EdgeInsets.all(15),
       // color: Colors.white,
       width: 335,

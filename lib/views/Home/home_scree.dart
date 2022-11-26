@@ -1,14 +1,10 @@
-import 'package:e_learn/on_boardingscreen.dart';
 import 'package:e_learn/views/Home/widget/a_cont.dart';
 import 'package:e_learn/views/Home/widget/b_carousel.dart';
 import 'package:e_learn/views/Home/widget/learning_platform.dart';
-import 'package:e_learn/views/Login/otp_validation.dart';
-import 'package:e_learn/views/SingnUp/sign_up.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -66,15 +62,23 @@ class _HomeScreenState extends State<HomeScreen> {
 
                 // first container
                 const AaContainer(),
-                // Bcarousel(),
+
+                const BCarousel(),
 
                 //learning Platform
-                const Text("Learning Platform",
-                    style:
-                        TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+                const SizedBox(
+                  height: 50,
+                  width: double.infinity,
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(20, 16, 0, 5),
+                    child: Text("Learning Platform",
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w500)),
+                  ),
+                ),
                 const LearningPlatform(),
                 Padding(
-                  padding: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.fromLTRB(20, 14, 20, 0),
                   child: Container(
                       padding: const EdgeInsets.all(16),
                       height: 400,
@@ -88,10 +92,12 @@ class _HomeScreenState extends State<HomeScreen> {
                               const Text(
                                 "Meetup",
                                 style: TextStyle(
-                                    fontSize: 25, color: Color(0xff440687)),
+                                    fontSize: 25,
+                                    color: Color(0xff440687),
+                                    fontWeight: FontWeight.bold),
                               ),
                               const SizedBox(
-                                width: 40,
+                                width: 120,
                               ),
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(70),
@@ -103,7 +109,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ],
                           ),
-                          // text("Off-line exchange of learning experiences"),
+                          const Text(
+                            "Off-line exchange of learning experiences",
+                            style: TextStyle(color: Color(0xff440687)),
+                          ),
                         ],
                       )),
                 )

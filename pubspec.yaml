@@ -41,7 +41,8 @@ dependencies:
   go_router: ^4.1.0
   carousel_slider: ^4.1.1
   convex_bottom_bar: ^3.1.0+1
-
+  gradient_widgets: ^0.6.0
+  material_floating_search_bar: ^0.3.7
 dev_dependencies:
   flutter_test:
     sdk: flutter

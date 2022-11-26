@@ -114,6 +114,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.5.1"
+  gradient_widgets:
+    dependency: "direct main"
+    description:
+      name: gradient_widgets
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.0"
   introduction_screen:
     dependency: "direct main"
     description:
@@ -156,6 +163,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.5"
+  material_floating_search_bar:
+    dependency: "direct main"
+    description:
+      name: material_floating_search_bar
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.7"
   meta:
     dependency: transitive
     description:
